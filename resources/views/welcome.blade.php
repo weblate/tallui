@@ -24,7 +24,9 @@
     <body >
         <img class="logo" src="_others/tallui-coming-soon/logo.png">
 
-         @livewire('first-livewire-component')
+        Weblate:
+
+         @livewire('weblate-api')
 
     </body>
 </html>
