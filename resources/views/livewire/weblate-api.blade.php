@@ -1,6 +1,4 @@
 <div>
-    {{-- $output --}}
-
 
     @foreach ($languages as $language)
 
