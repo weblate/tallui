@@ -1,10 +1,4 @@
 <?php
-<<<<<<< HEAD
-=======
-
-use Illuminate\Support\Facades\Route;
-
->>>>>>> 4422e1a0af5209537275743b482433c4e3c4b3ad
 /*
 |
 | PLEASE INCLUDE ONLY ROUTES, EVERY DEVELOPER (AS WELL AS PHP-STAN)
@@ -40,7 +34,6 @@ Route::middleware([
     })->name('dashboard');
 });
 
-<<<<<<< HEAD
 $custom_parts = explode(', ', env('TUI_CUSTOM_DEVELOPER'));
 if (is_array($custom_parts)) {
     foreach($custom_parts as $custom_part) {
@@ -49,20 +42,6 @@ if (is_array($custom_parts)) {
         if (view()->exists($custom_view)) {
             Route::view($custom_route, $custom_view);
         }
-=======
-// use .env to create custom(s) - https://laracasts.com/discuss/channels/1/return-array-from-env?
-// loop through customs to create routes
-// loop in views to create buttons
-// Conditional views, passing CI?
-
-$custom_parts = ['alf', 'kim', 'reinhold'];
-
-foreach ($custom_parts as $custom_part) {
-    $custom_view = 'custom.'.$custom_part;
-    $custom_route = 'custom/'.$custom_part;
-    if (view()->exists($custom_view)) {
-        Route::view($custom_route, $custom_view);
->>>>>>> 4422e1a0af5209537275743b482433c4e3c4b3ad
     }
 }
 
@@ -77,7 +56,6 @@ if (is_array($custom_parts)) {
             // Route::prefix('admin')
             // ->group($tui_routes);
         }
-
     }
 }
 
