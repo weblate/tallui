@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,9 +46,9 @@ Route::middleware([
 
 $custom_parts = ['alf', 'kim', 'reinhold'];
 
-foreach($custom_parts as $custom_part) {
-    $custom_view = 'custom.' . $custom_part;
-    $custom_route = 'custom/' . $custom_part;
+foreach ($custom_parts as $custom_part) {
+    $custom_view = 'custom.'.$custom_part;
+    $custom_route = 'custom/'.$custom_part;
     if (view()->exists($custom_view)) {
         Route::view($custom_route, $custom_view);
     }
