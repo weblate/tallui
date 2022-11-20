@@ -36,9 +36,9 @@ Route::middleware([
 
 $custom_parts = explode(', ', env('TUI_CUSTOM_DEVELOPER'));
 if (is_array($custom_parts)) {
-    foreach($custom_parts as $custom_part) {
-        $custom_view = 'custom.' . $custom_part;
-        $custom_route = 'custom/' . $custom_part;
+    foreach ($custom_parts as $custom_part) {
+        $custom_view = 'custom.'.$custom_part;
+        $custom_route = 'custom/'.$custom_part;
         if (view()->exists($custom_view)) {
             Route::view($custom_route, $custom_view);
         }
@@ -57,4 +57,3 @@ if (is_array($custom_parts)) {
         }
     }
 }
-
